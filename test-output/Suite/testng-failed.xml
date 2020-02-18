@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.osc.automation.testcases.QuickQuotePageTest">
+        <methods>
+          <include name="verifyQuickQuotePageOSCProductDetailsWhenLanguageSelectedToEnglish"/>
+          <include name="verifyQuickQuotePageLanguageSwitcherTextWhenDefault"/>
+          <include name="verifyQuickQuotePageWhenLanguageSwitchToEnglishFromChinese"/>
+          <include name="veryfyChinesTextOfQuickQuotePageLanguageSwitchButton"/>
+          <include name="veryfyQuickQuotePageContacUsButtonFunctionalityWhenDefaultLanguageSelected"/>
+          <include name="testQuickQuotePageWelcome"/>
+          <include name="verifyQuickQuotePageTabTitle"/>
+          <include name="verifyExploreBenefitsPopupWhenClickOnButton"/>
+          <include name="verifyQuickQuotePageStepsTextWhenLanguageSelectedToEnglish"/>
+          <include name="verifyExploreBenefitsPopupContent"/>
+          <include name="verifyQuickQuotePageContacUsButtonText"/>
+          <include name="verifyQuickQuotePageOSCProductDetailsWhenLanguageSelectedToChinese"/>
+          <include name="endTest"/>
+          <include name="setUp"/>
+          <include name="verifyQuickQuotePageTitleWhenLanguageSwitchToEnglishFromChinese"/>
+          <include name="verifyQuickQuotePageWhenSelectLanguageChinese"/>
+          <include name="verifyExploreBenefitsButtonText"/>
+          <include name="verifyThatQuickQuotePageIsOpen"/>
+          <include name="verifyQuickQuotePageStepsWhenLanguageSelectedToChinese"/>
+          <include name="verifyQuickQuotePageTitleWhenLanguageSwitchToChinese"/>
+        </methods>
+      </class> <!-- com.osc.automation.testcases.QuickQuotePageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
