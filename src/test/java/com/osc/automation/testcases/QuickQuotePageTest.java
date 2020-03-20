@@ -33,7 +33,7 @@ public class QuickQuotePageTest {
 
 		// WebDriverManager.chromedriver().setup();
 		driver = Utils.intializDriver(DriverType.CHROME.value());
-
+		//driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS) ;
 		/// driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		/// driver = Utils.intializDriver(DriverType.CHROME.value());
 		quickQuotePage = QuickQuotePage.getQuickQuotePage(driver);
@@ -42,22 +42,18 @@ public class QuickQuotePageTest {
 
 	}
 
-	@Test(priority = 1)
-	public void testQuickQuotePageWelcome() {
-		System.out.println("Welcome to test cases");
-	}
-
+	
 	@Test(priority = 2)
 	public void verifyThatQuickQuotePageIsOpen() {
 
 		String bodyText = quickQuotePage.lbl_Header.getText();
-		System.out.println("testQuickQuotePageHeader");
+		//System.out.println("testQuickQuotePageHeader");
 		Assert.assertEquals(bodyText, QuickQuotePageVariables.PAGE_HEADING);
 	}
 
 	@Test(priority = 3)
 	public void verifyQuickQuotePageTabTitle() {
-		System.out.println("testQuickQuotePageTabTitle");
+		//System.out.println("testQuickQuotePageTabTitle");
 		Assert.assertEquals(driver.getTitle(), QuickQuotePageVariables.PAGE_HEADING);
 	}
 
@@ -68,24 +64,25 @@ public class QuickQuotePageTest {
 	}
 
 	@Test(priority = 5)
-	public void veryfyQuickQuotePageContacUsButtonFunctionalityWhenDefaultLanguageSelected() {
+	public void veryfyQuickQuotePageContacUsButtonFunctionalityWhenDefaultLanguageSelected() throws InterruptedException {
 		// Check Contact Us Action
 		// Click on Contact Us
 		quickQuotePage.btn_ContactUs.click();
+		Utils.waitFor(5000);
 		List<String> browserTabs = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(browserTabs.get(1));
 		String pageTitle = driver.getTitle();
 		String pageUrl = driver.getCurrentUrl();
-		System.out.println("pageTitle :" + pageTitle);
-		System.out.println("pageUrl :" + pageUrl);
+		//System.out.println("pageTitle :" + pageTitle);
+		//System.out.println("pageUrl :" + pageUrl);
 		if (pageTitle.equals(QuickQuotePageVariables.CONTACT_US_TITLE)
 				&& pageUrl.equals(QuickQuotePageVariables.CONTACT_US_URL)) {
-			System.out.println("assertTrue");
+			//System.out.println("assertTrue");
 			Assert.assertTrue(true);
 
 		} else {
 
-			System.out.println("assert true");
+			//System.out.println("assert true");
 			Assert.assertTrue(false);
 
 		}
@@ -99,15 +96,18 @@ public class QuickQuotePageTest {
 	}
 
 	@Test(priority = 7)
-	public void veryfyChinesTextOfQuickQuotePageLanguageSwitchButton() {
+	public void veryfyChinesTextOfQuickQuotePageLanguageSwitchButton() throws InterruptedException {
 		quickQuotePage.btn_language.click();
+		Utils.waitFor(5000);
 		Assert.assertEquals(QuickQuotePageVariables.LANGUAGE_BTN_TEXT_ENGLISH, quickQuotePage.btn_language.getText());
 		quickQuotePage.btn_language.click();
+		Utils.waitFor(1000);
 	}
 
 	@Test(priority = 8)
-	public void verifyQuickQuotePageWhenSelectLanguageChinese() {
+	public void verifyQuickQuotePageWhenSelectLanguageChinese() throws InterruptedException {
 		quickQuotePage.btn_language.click();
+		Utils.waitFor(5000);
 		/*
 		 * if(quickQuotePage.btn_language.getText().equals(QuickQuotePageVariables.
 		 * LANGUAGE_BTN_TEXT_CHINESE)){ quickQuotePage.btn_language.click(); }
@@ -178,6 +178,17 @@ public class QuickQuotePageTest {
 		 * if(quickQuotePage.btn_language.getText().equals(QuickQuotePageVariables.
 		 * LANGUAGE_BTN_TEXT_CHINESE)){ quickQuotePage.btn_language.click(); }
 		 */
+		/*
+		 * System.out.println("------Check-----");
+		 * System.out.println(quickQuotePage.we_Losc_Hed.getText());
+		 * System.out.println(QuickQuotePageVariables.TXT_TILE_PARA_LOSC_CHI);
+		 * System.out.println(quickQuotePage.we_Losc_Product_Desc.getText());
+		 * System.out.println(QuickQuotePageVariables.TXT_PRODUCT_DESC_CHI);
+		 * System.out.println(quickQuotePage.we_Product_Other_Details.getText());
+		 * System.out.println(QuickQuotePageVariables.TXT_PRODUCT_OTHER_DESC_CHI);
+		 */
+		
+		
 		if (quickQuotePage.we_Losc_Hed.getText().equals(QuickQuotePageVariables.TXT_TILE_PARA_LOSC_CHI)
 				&& quickQuotePage.we_Losc_Product_Desc.getText().equals(QuickQuotePageVariables.TXT_PRODUCT_DESC_CHI)
 				&& quickQuotePage.we_Product_Other_Details.getText()
@@ -197,7 +208,7 @@ public class QuickQuotePageTest {
 	public void verifyQuickQuotePageWhenLanguageSwitchToEnglishFromChinese() throws InterruptedException {
 
 		quickQuotePage.btn_language.click();
-
+		Utils.waitFor(5000);
 		String pageHedChi = driver.getTitle();
 
 		if (pageHedChi.equals(QuickQuotePageVariables.PAGE_HEADING)
@@ -216,8 +227,10 @@ public class QuickQuotePageTest {
 	@Test(priority = 13)
 	public void verifyQuickQuotePageTitleWhenLanguageSwitchToEnglishFromChinese() {
 
-		System.out.println(quickQuotePage.we_Page_Title.getText());
-		System.out.println(QuickQuotePageVariables.TXT_OSC_ENG);
+		/*
+		 * System.out.println(quickQuotePage.we_Page_Title.getText());
+		 * System.out.println(QuickQuotePageVariables.TXT_OSC_ENG);
+		 */
 		if (quickQuotePage.we_Page_Title.getText().equals(QuickQuotePageVariables.TXT_OSC_ENG)) {
 
 			Assert.assertTrue(true);
@@ -256,17 +269,17 @@ public class QuickQuotePageTest {
 		String flag2 = null;
 		String flag3 = null;
 		if (quickQuotePage.we_Losc_Hed.getText().equals(QuickQuotePageVariables.TXT_TILE_PARA_LOSC_ENG)) {
-			System.out.println("1");
+			//System.out.println("1");
 			flag1 = "TRUE";
 		}
 		if (quickQuotePage.we_Losc_Product_Desc.getText().equals(QuickQuotePageVariables.TXT_PRODUCT_DESC_ENG)) {
-			System.out.println("2");
+			//System.out.println("2");
 			flag2 = "TRUE";
 
 		}
 		if (quickQuotePage.we_Product_Other_Details.getText()
 				.equals(QuickQuotePageVariables.TXT_PRODUCT_OTHER_DESC_ENG)) {
-			System.out.println("3");
+			//System.out.println("3");
 			flag3 = "TRUE";
 		}
 
@@ -300,6 +313,7 @@ public class QuickQuotePageTest {
 		// button");
 		// System.out.println("Step1: Click on Explore Benefits Button.");
 		quickQuotePage.btn_Explore_Button.click();
+		Utils.waitFor(5000);
 		// System.out.println("Step2: Wait for Popup open.");
 		// System.out.println("Step3: Get popup heading text.");
 		// System.out.println("Step4: Check expected with actual.");
@@ -312,7 +326,8 @@ public class QuickQuotePageTest {
 			Assert.assertTrue(false);
 		}
 		quickQuotePage.we_Explore_Popup_Closed.click();
-		Thread.sleep(500);
+		Utils.waitFor(5000);
+		//Thread.sleep(500);
 		// System.out.println("Step5: Closed the popup.");
 
 	}
@@ -320,8 +335,8 @@ public class QuickQuotePageTest {
 	@Test(priority = 18)
 	public void verifyExploreBenefitsPopupContent() throws InterruptedException {
 		quickQuotePage.btn_Explore_Button.click();
-
-		Thread.sleep(1000);
+		Utils.waitFor(5000);
+		
 		String flag1;
 		String flag2;
 		String flag3;

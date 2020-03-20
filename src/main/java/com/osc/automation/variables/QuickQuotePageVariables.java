@@ -53,8 +53,7 @@ public class QuickQuotePageVariables {
 	public static String TXT_PAGE_TAB_TEXT_CHI="升學易";
 	
 	public static String TXT_PRODUCT_DESC_ENG="Nowadays, studying abroad becomes one of the common ways in widening one’s horizon. While you are studying overseas, you must have concerns on different kinds of protection as well. Liberty International Insurance Limited now provides you with the Overseas StudentCare Insurance Plan, aimed at easing your worries with the easiest way.";
-	public static String TXT_PRODUCT_DESC_CHI="出外留學，眼界大開。當您需要前往外地，您一定會對不同類別的保障有疑問。故此，利寶的升學易會以最簡易的方法為您解憂。";
-	
+	public static String TXT_PRODUCT_DESC_CHI="出外留學，眼界大開。當您前往外地，您會需要不同類別的保障，令您可專注學業。故此，利寶的升學易以最簡易的方法為您解憂。";
 	public static String TXT_PRODUCT_OTHER_DESC_ENG="Please click “Explore Benefits” button to see how Our Overseas StudentCare (OSC) policy protect your beloved child whilst he/she is studying aboard.";
 	public static String TXT_PRODUCT_OTHER_DESC_CHI="請點擊「瞭解更多」查閱升學易如何保障您在國外留學的子女。";
 	

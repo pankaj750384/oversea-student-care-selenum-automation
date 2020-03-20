@@ -32,6 +32,8 @@ public class Utils {
 
 			try {
 				System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+				System.setProperty("webdriver.chrome.silentOutput","true");
+				
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("--headless");
 				options.addArguments("--no-sandbox");
@@ -67,6 +69,11 @@ public class Utils {
 		}
 		return driver;
 
+	}
+	
+	
+	public static void waitFor(long mils) throws InterruptedException {
+		Thread.sleep(mils);	
 	}
 
 }
