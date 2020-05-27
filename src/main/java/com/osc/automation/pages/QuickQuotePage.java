@@ -59,6 +59,7 @@ public class QuickQuotePage {
 	 @FindBy(how = How.XPATH, using ="/html/body/ngb-modal-window/div/div/app-explorebenefits/div/button/span")
 	 public WebElement we_Explore_Popup_Closed;
 	 
+	 
 	 @FindBy(how = How.XPATH, using ="/html/body/ngb-modal-window/div/div/app-explorebenefits/div/div/ul/li[1]/div[2]")
 	 public WebElement we_Explore_Popup_Point1;
 	 @FindBy(how = How.XPATH, using ="/html/body/ngb-modal-window/div/div/app-explorebenefits/div/div/ul/li[2]/div[2]")
@@ -71,8 +72,8 @@ public class QuickQuotePage {
 	 public WebElement we_Explore_Popup_Point5;
 	 @FindBy(how = How.XPATH, using ="/html/body/ngb-modal-window/div/div/app-explorebenefits/div/div/ul/li[6]/div[2]")
 	 public WebElement we_Explore_Popup_Point6; 
-	 @FindBy(how = How.XPATH, using ="/html/body/ngb-modal-window/div/div/app-explorebenefits/div/div/ul/li[7]/div[2]")
-	 public WebElement we_Explore_Popup_Point7;
+	 //@FindBy(how = How.XPATH, using ="/html/body/ngb-modal-window/div/div/app-explorebenefits/div/div/ul/li[7]/div[2]")
+	// public WebElement we_Explore_Popup_Point7;
 	 
 	 
 	 

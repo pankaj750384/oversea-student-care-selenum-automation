@@ -65,10 +65,10 @@ public class QuickQuotePageVariables {
 	
 	public static String EXPLORE_BENFITS_POPUP_HED="Our Overseas StudentCare: no additional charges, but more benefits"; 
 	public static String EXPLORE_BENFITS_POPUP_POINT1="Medical Expenses up to HKD 1,500,000 without any excess or deductible."; 
-	public static String EXPLORE_BENFITS_POPUP_POINT2="24/7 on Round-the-year insurance coverage whilst abroad"; 
-	public static String EXPLORE_BENFITS_POPUP_POINT3="Unlimited medical evacuation if necessary"; 
-	public static String EXPLORE_BENFITS_POPUP_POINT4="Extend to cover any leisure trips throughout study year"; 
-	public static String EXPLORE_BENFITS_POPUP_POINT5="Cover all amateur sports with no limit on height"; 
-	public static String EXPLORE_BENFITS_POPUP_POINT6="Liberty scholarship to reward their outstanding academic performance"; 
+	public static String EXPLORE_BENFITS_POPUP_POINT2="Coverage on unpaid tuition fees under tragedy situations"; 
+	public static String EXPLORE_BENFITS_POPUP_POINT3="Extend to cover leisure trips throughout study year"; 
+	public static String EXPLORE_BENFITS_POPUP_POINT4="Cover all amateur sports (with no height limits)"; 
+	public static String EXPLORE_BENFITS_POPUP_POINT5="Liberty scholarship to reward outstanding academic performance"; 
+	public static String EXPLORE_BENFITS_POPUP_POINT6="24-hour worldwide emergency assistance services"; 
 	public static String EXPLORE_BENFITS_POPUP_POINT7="Cover the Student from age 8 to 33 years old."; 
 }
